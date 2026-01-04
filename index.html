@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DosiCare | 정밀한 방사선 치료 솔루션</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DosiCare">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">홈</a>
+                <a href="software.html">소프트웨어</a>
+                <a href="services.html">서비스</a>
+                <a href="contact.html">고객지원</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary">문의하기</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <img src="images/logo.png" alt="DosiCare" class="hero-logo">
+                    <h1 style="font-size: 2.5rem; line-height: 1.3;">Global Standard Dosimetry Solutions.<br><span
+                            style="color: var(--primary)">DosiCare</span>가 제안합니다.</h1>
+                    <p>IBA Dosimetry의 공식 판매처로서 세계 최고 수준의 QA 장비와 통합 솔루션을 국내 의료기관에 공급합니다.</p>
+                    <div class="hero-btns">
+                        <a href="services.html" class="btn btn-primary">제품 및 솔루션 보기</a>
+                        <a href="software.html" class="btn btn-outline" style="margin-left: 1rem;">Easy Machine S/W</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.png" alt="DosiCare Medical Technology">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-header">
+                <h2>Total Dosimetry Solution Provider</h2>
+                <p>도지케어는 방사선 종양학 분야의 최첨단 장비 공급과 기술 지원을 아우르는 토탈 솔루션 파트너입니다.</p>
+            </div>
+            <div class="glass card" style="text-align: center;">
+                <p>도지케어는 IBA Dosimetry의 우수한 QA 시스템을 국내에 보급하며, 단순한 장비 판매를 넘어 설치, 교육, 유지보수, 그리고 자체 개발 소프트웨어인 'Easy
+                    Machine'을 통한 워크플로우 최적화까지 의료 현장에 필요한 모든 것을 책임집니다.</p>
+            </div>
+        </section>
+
+        <section id="dosimetry">
+            <div class="section-header">
+                <h2>도지메트리 환경 지원</h2>
+            </div>
+            <div class="grid">
+                <div class="glass card">
+                    <h3>분석 및 최적화</h3>
+                    <p>복잡한 방사선 분포를 정확하게 분석하여 치료 계획의 신뢰도를 높입니다.</p>
+                </div>
+                <div class="glass card">
+                    <h3>환경 구축 컨설팅</h3>
+                    <p>최신 도지메트리 장비 및 시스템 도입을 위한 전문 컨설팅을 제공합니다.</p>
+                </div>
+                <div class="glass card">
+                    <h3>유지 점검 및 교육</h3>
+                    <p>시스템의 안정적인 운영을 위한 정기 점검과 기술 교육 프로그램을 운영합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="easy-machine"
+            style="background: var(--light); border-radius: 40px; box-shadow: var(--card-shadow);">
+            <div class="grid" style="align-items: center;">
+                <div>
+                    <h2>Easy Machine</h2>
+                    <p style="font-size: 1.2rem; margin: 1.5rem 0; color: var(--text-secondary);">
+                        머신 QA의 새로운 기준, Easy Machine.<br>
+                        복잡한 측정 및 분석 과정을 자동화하여 업무 효율성을 극대화합니다.
+                    </p>
+                    <a href="software.html" class="btn btn-outline">상세 기능 보기</a>
+                </div>
+                <div class="glass"
+                    style="height: 300px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary);">
+                    [Easy Machine Interface Preview]
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DosiCare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

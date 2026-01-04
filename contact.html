@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객지원 | DosiCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .faq-item {
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            background: white;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DosiCare">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">홈</a>
+                <a href="software.html">소프트웨어</a>
+                <a href="services.html">서비스</a>
+                <a href="contact.html" class="active">고객지원</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary">문의하기</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" style="min-height: 50vh;">
+            <div class="hero-content">
+                <h1>고객 지원 및 문의</h1>
+                <p>궁금한 점이 있으신가요? 도지케어가 신속하게 도와드리겠습니다.</p>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="section-header">
+                <h2>자주 묻는 질문 (FAQ)</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="glass faq-item">
+                    <div class="faq-question">
+                        <span>Easy Machine 소프트웨어는 어떤 파일 형식을 지원하나요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        표준 DICOM RT 파일을 포함하여 대부분의 주요 Dosimetry 장비에서 생성되는 .asc, .csv, .txt 형식을 지원합니다.
+                    </div>
+                </div>
+                <div class="glass faq-item">
+                    <div class="faq-question">
+                        <span>서비스 지원 범위는 전국 어디까지인가요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        네, 도지케어는 전국 모든 병원을 대상으로 기술 지원 및 머신 QA 어시스트 서비스를 제공하고 있습니다.
+                    </div>
+                </div>
+                <div class="glass faq-item">
+                    <div class="faq-question">
+                        <span>데모 버전을 사용해 볼 수 있나요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        홈페이지 하단의 문의하기를 통해 요청해 주시면, 확인 후 2주간 사용할 수 있는 라이선스를 발급해 드립니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-header">
+                <h2>문의하기</h2>
+                <p>아래 양식을 작성해 주시면 담당자가 업무일 기준 24시간 이내에 연락드립니다.</p>
+            </div>
+            <form class="glass card contact-form">
+                <div class="input-group">
+                    <label>성함 / 병원명</label>
+                    <input type="text" placeholder="홍길동 / OO대학교 병원">
+                </div>
+                <div class="input-group">
+                    <label>이메일 주소</label>
+                    <input type="email" placeholder="example@dosicare.com">
+                </div>
+                <div class="input-group">
+                    <label>문의 내용</label>
+                    <textarea rows="5" placeholder="궁금하신 내용을 상세히 적어주세요."></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" style="width: 100%;">문의 접수하기</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DosiCare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const symbol = item.querySelector('.faq-question span:last-child');
+                symbol.textContent = item.classList.contains('active') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+
+</html>
